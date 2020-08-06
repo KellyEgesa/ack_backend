@@ -5,9 +5,7 @@ module.exports = function () {
   const db = config.get("db");
   mongoose
     .connect(
-      `mongodb+srv://KellyEgesa:${config.get(
-        "passworddb"
-      )}@ack.lyu4n.mongodb.net/<dbname>?retryWrites=true&w=majority
+      `mongodb+srv://KellyEgesa:Bartholomew1007@ack.lyu4n.mongodb.net/<dbname>?retryWrites=true&w=majority
       `,
       {
         useUnifiedTopology: true,
