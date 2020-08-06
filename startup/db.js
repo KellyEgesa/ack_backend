@@ -6,7 +6,7 @@ module.exports = function () {
   mongoose
     .connect(
       `mongodb+srv://KellyEgesa:${config.get(
-        passworddb
+        "passworddb"
       )}@ack.lyu4n.mongodb.net/<dbname>?retryWrites=true&w=majority
       `,
       {
