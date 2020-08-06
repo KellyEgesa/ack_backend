@@ -5,9 +5,9 @@ module.exports = function () {
   const db = config.get("db");
   mongoose
     .connect(
-      `mongodb+srv://KellyEgesa:${config.get(
+      `mongodb://KellyEgesa:${config.get(
         "passworddb"
-      )}@cluster0.bkfbu.mongodb.net/tests?retryWrites=true&w=majority`,
+      )}@ds045465.mlab.com:45465/heroku_d4vwwmnb`,
       {
         useNewUrlParser: true,
         useUnifiedTopology: true,
