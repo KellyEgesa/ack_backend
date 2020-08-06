@@ -5,7 +5,8 @@ module.exports = function () {
   const db = config.get("db");
   mongoose
     .connect(
-      `mongodb://KellyEgesa:Bartholomew1007@ds045465.mlab.com:45465/heroku_d4vwwmnb`,
+      `mongodb+srv://KellyEgesa:Bartholomew1007@ack.lyu4n.mongodb.net/<dbname>?retryWrites=true&w=majority
+      `,
       {
         useUnifiedTopology: true,
         useFindAndModify: false,
