@@ -7,6 +7,7 @@ module.exports = function () {
     .connect("mongodb://localhost:27017/ack", {
       useNewUrlParser: true,
       useUnifiedTopology: true,
+      useFindAndModify: false,
     })
     .then(() => {
       console.log("connected to the database");

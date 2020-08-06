@@ -1,0 +1,4 @@
+{
+  "jwtPrivateKey": "ack_jwtPrivateKey",
+  "frontend": "ack_frontend"
+}

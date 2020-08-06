@@ -10,7 +10,7 @@ const servicesSchema = new mongoose.Schema({
     trim: true,
   },
   time: { required: true, type: String },
-  seatsLeft: { required: true, type: Number },
+  seatsLeft: { required: true, type: Number, min: 0, max: 100 },
 });
 
 const Services = mongoose.model("Services", servicesSchema);
@@ -21,7 +21,7 @@ function validateServices(services) {
     time: Joi.string()
       .regex(/^([0-9]{2})\:([0-9]{2})$/)
       .required(),
-    seatsLeft: Joi.number().required(),
+    seatsLeft: Joi.number().min(0).max(100).required(),
   });
   return schema.validate(services);
 }

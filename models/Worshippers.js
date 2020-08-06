@@ -24,6 +24,7 @@ const Worshippers = mongoose.model(
       type: String,
       unique: true,
       trim: true,
+      unique: true,
     },
     phonenumber: {
       required: true,
@@ -46,6 +47,11 @@ const Worshippers = mongoose.model(
         time: { required: true, type: String },
       }),
     },
+    confirmed: {
+      type: Boolean,
+      default: false,
+      required: true,
+    },
   })
 );
 
@@ -59,6 +65,7 @@ function validateWorshippers(user) {
       .min(10)
       .max(10)
       .regex(/^([0][7])([0-9]{8})$/),
+    dob: Joi.number().min(1962).max(2007),
   });
   return schema.validate(user);
 }
