@@ -7,7 +7,6 @@ const nodemailer = require("nodemailer");
 const config = require("config");
 var smtpTransport = require("nodemailer-smtp-transport");
 var ObjectID = require("mongodb").ObjectID;
-const config = require("config");
 
 const router = express.Router();
 Fawn.init(mongoose);
