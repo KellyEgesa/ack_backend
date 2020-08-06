@@ -7,7 +7,6 @@ module.exports = function () {
     .connect(
       `mongodb://KellyEgesa:Bartholomew1007@cluster0.bkfbu.mongodb.net/<dbname>?retryWrites=true&w=majority`,
       {
-        useNewUrlParser: true,
         useUnifiedTopology: true,
         useFindAndModify: false,
       }
