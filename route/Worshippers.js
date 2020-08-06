@@ -7,6 +7,7 @@ const nodemailer = require("nodemailer");
 const config = require("config");
 var smtpTransport = require("nodemailer-smtp-transport");
 var ObjectID = require("mongodb").ObjectID;
+const config = require("config");
 
 const router = express.Router();
 Fawn.init(mongoose);
@@ -53,7 +54,7 @@ router.post("/", async (req, res) => {
       host: "smtp.gmail.com",
       auth: {
         user: "ackstpeters.kahawasukari.booking@gmail.com",
-        pass: "YesuNiBwana408",
+        pass: config.emailpass,
       },
     })
   );
@@ -106,7 +107,7 @@ router.get("/:id", async (req, res) => {
       host: "smtp.gmail.com",
       auth: {
         user: "ackstpeters.kahawasukari.booking@gmail.com",
-        pass: "YesuNiBwana408",
+        pass: config.emailpass,
       },
     })
   );

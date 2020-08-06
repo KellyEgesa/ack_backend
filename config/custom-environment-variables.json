@@ -1,4 +1,7 @@
 {
   "jwtPrivateKey": "ack_jwtPrivateKey",
-  "frontend": "ack_frontend"
+  "frontend": "ack_frontend",
+  "userdb": "ack_db",
+  "passworddb": "ack-password_db",
+  "emailpass": ""
 }

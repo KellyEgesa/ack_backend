@@ -6,6 +6,7 @@ const router = express.Router();
 const nodemailer = require("nodemailer");
 var smtpTransport = require("nodemailer-smtp-transport");
 var ObjectID = require("mongodb").ObjectID;
+const config = require("config");
 
 router.post("/", auth, async (req, res) => {
   const { error } = validate(req.body);
@@ -104,7 +105,7 @@ router.get("/print/:id", auth, async (req, res) => {
       host: "smtp.gmail.com",
       auth: {
         user: "ackstpeters.kahawasukari.booking@gmail.com",
-        pass: "YesuNiBwana408",
+        pass: config.emailpass,
       },
     })
   );
