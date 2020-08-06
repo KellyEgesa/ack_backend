@@ -53,7 +53,7 @@ router.post("/", async (req, res) => {
       host: "smtp.gmail.com",
       auth: {
         user: "ackstpeters.kahawasukari.booking@gmail.com",
-        pass: config.get("emailpass"),
+        pass: "YesuNiBwana408",
       },
     })
   );
@@ -72,7 +72,8 @@ router.post("/", async (req, res) => {
 
   transporter.sendMail(mailDetails, function (err, data) {
     if (err) {
-      console.log("an error occurred");
+      console.log("an error occurred", err);
+      throw new Error();
     } else {
       console.log("Email sent successfully");
     }
@@ -106,11 +107,11 @@ router.get("/:id", async (req, res) => {
       host: "smtp.gmail.com",
       auth: {
         user: "ackstpeters.kahawasukari.booking@gmail.com",
-        pass: config.get("emailpass"),
+        pass: "YesuNiBwana408",
       },
     })
   );
-
+  console.log(config.get("emailpass"));
   let mailDetails = {
     from: "ackstpeters.kahawasukari.booking@gmail.com",
     to: result.email,
@@ -120,7 +121,8 @@ router.get("/:id", async (req, res) => {
 
   transporter.sendMail(mailDetails, function (err, data) {
     if (err) {
-      console.log("an error occurred");
+      console.log("an error occurred", err);
+      throw new Error();
     } else {
       console.log("Email sent successfully");
     }

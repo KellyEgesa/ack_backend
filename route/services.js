@@ -105,7 +105,7 @@ router.get("/print/:id", auth, async (req, res) => {
       host: "smtp.gmail.com",
       auth: {
         user: "ackstpeters.kahawasukari.booking@gmail.com",
-        pass: config.get("emailpass"),
+        pass: "YesuNiBwana408",
       },
     })
   );
@@ -126,6 +126,7 @@ router.get("/print/:id", auth, async (req, res) => {
   transporter.sendMail(mailDetails, function (err, data) {
     if (err) {
       console.log(err);
+      throw new Error();
     } else {
       console.log("Email sent successfully");
     }
