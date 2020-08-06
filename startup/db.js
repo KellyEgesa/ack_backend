@@ -5,7 +5,7 @@ module.exports = function () {
   const db = config.get("db");
   mongoose
     .connect(
-      `mongodb+srv://${config.get("userdb")}:${config.get(
+      `mongodb+srv://KellyEgesa:${config.get(
         "passworddb"
       )}@cluster0.bkfbu.mongodb.net/test`,
       {
