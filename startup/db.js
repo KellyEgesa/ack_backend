@@ -7,7 +7,7 @@ module.exports = function () {
     .connect(
       `mongodb+srv://KellyEgesa:${config.get(
         "passworddb"
-      )}@cluster0.bkfbu.mongodb.net/test`,
+      )}@cluster0.bkfbu.mongodb.net/tests?retryWrites=true&w=majority`,
       {
         useNewUrlParser: true,
         useUnifiedTopology: true,
