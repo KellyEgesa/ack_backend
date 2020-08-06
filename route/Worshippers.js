@@ -53,7 +53,7 @@ router.post("/", async (req, res) => {
       host: "smtp.gmail.com",
       auth: {
         user: "ackstpeters.kahawasukari.booking@gmail.com",
-        pass: config.emailpass,
+        pass: config.get("emailpass"),
       },
     })
   );
@@ -106,7 +106,7 @@ router.get("/:id", async (req, res) => {
       host: "smtp.gmail.com",
       auth: {
         user: "ackstpeters.kahawasukari.booking@gmail.com",
-        pass: config.emailpass,
+        pass: config.get("emailpass"),
       },
     })
   );

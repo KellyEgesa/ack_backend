@@ -105,7 +105,7 @@ router.get("/print/:id", auth, async (req, res) => {
       host: "smtp.gmail.com",
       auth: {
         user: "ackstpeters.kahawasukari.booking@gmail.com",
-        pass: config.emailpass,
+        pass: config.get("emailpass"),
       },
     })
   );
